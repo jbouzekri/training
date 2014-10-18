@@ -1,0 +1,12 @@
+nbproject
+vendor
+composer.phar
+*.aux
+*.dvi
+*.log
+*.nav
+*.out
+*.snm
+*.toc
+*.vrb
+*.gz

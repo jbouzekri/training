@@ -1,0 +1,22 @@
+#!/usr/bin/env php
+<?php
+
+require 'config.php';
+require 'vendor/autoload.php';
+
+set_time_limit(0);
+
+use Jb\RabbitMQ\Input\ArgvInput;
+use Symfony\Component\Console\Application;
+
+$input = new ArgvInput();
+$debug = $input->hasParameterOption(array('--debug', ''));
+
+if ($debug) {
+    define('AMQP_DEBUG', true);
+}
+
+$application = new Application();
+$application->add(new Jb\RabbitMQ\Command\ConsumerCommand());
+$application->add(new Jb\RabbitMQ\Command\PublisherCommand());
+$application->run($input);

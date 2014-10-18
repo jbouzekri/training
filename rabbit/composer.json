@@ -1,0 +1,14 @@
+{
+    "name": "jbouzekri/rabbitmq-example",
+    "description": "Many examples of different queues and exchanges configuration",
+    "keywords": ["RabbitMQ", "Example", "Tutorial"],
+    "homepage": "https://github.com/jbouzekri/rabbitmq-example",
+    "license": "MIT",
+    "require": {
+        "videlalvaro/php-amqplib": "v2.2.6",
+        "symfony/console": "~2.4"
+    },
+    "autoload": {
+        "psr-0": { "Jb\\RabbitMQ": "src" }
+    }
+}
